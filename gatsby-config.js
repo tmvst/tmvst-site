@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    url: 'https://lumen.netlify.com',
-    title: 'Blog by John Doe',
-    subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    url: 'https://tmv.st',
+    title: 'Tomas Vestenicky – Personal Site & Blog',
+    subtitle: 'Universal maker. I create online projects, travel and shoot photos along the way.',
     copyright: '© All rights reserved.',
     disqusShortname: '',
     menu: [
@@ -20,11 +20,11 @@ module.exports = {
       }
     ],
     author: {
-      name: 'John Doe',
-      email: '#',
-      telegram: '#',
-      twitter: '#',
-      github: '#',
+      name: 'Tomas Vestenicky',
+      email: 'tomas@feedbear.com',
+      telegram: 'tmvst',
+      twitter: '@tmvst',
+      github: 'tmvst',
       rss: '#',
       vk: '#'
     }
@@ -53,7 +53,7 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => (
+            serialize: ({ query: { site, allMarkdownRemark } }) =>
               allMarkdownRemark.edges.map(edge =>
                 Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.frontmatter.description,
@@ -61,8 +61,7 @@ module.exports = {
                   url: site.siteMetadata.site_url + edge.node.fields.slug,
                   guid: site.siteMetadata.site_url + edge.node.fields.slug,
                   custom_elements: [{ 'content:encoded': edge.node.html }]
-                }))
-            ),
+                })),
             query: `
               {
                 allMarkdownRemark(
@@ -99,9 +98,7 @@ module.exports = {
         plugins: [
           {
             resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 960
-            }
+            options: { maxWidth: 960 }
           },
           {
             resolve: 'gatsby-remark-responsive-iframe',
@@ -120,10 +117,8 @@ module.exports = {
       options: { trackingId: 'UA-73379983-2' }
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`roboto\:400,400i,500,700`]
-      }
+      resolve: 'gatsby-plugin-google-fonts',
+      options: { fonts: ['roboto:400,400i,500,700'] }
     },
     {
       resolve: 'gatsby-plugin-sitemap',

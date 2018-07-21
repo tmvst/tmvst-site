@@ -18,22 +18,15 @@ class Links extends React.Component {
       <div className="links">
         <ul className="links__list">
           <li className="links__list-item">
-            <a href={`https://www.twitter.com/${links.twitter}`} target="_blank" >
+            <a href={`https://www.twitter.com/${links.twitter}`} target="_blank">
               <i className="icon-twitter" />
             </a>
           </li>
           <li className="links__list-item">
-            <a href={`https://www.github.com/${links.github}`} target="_blank" >
+            <a href={`https://www.github.com/${links.github}`} target="_blank">
               <i className="icon-github" />
             </a>
           </li>
-          <li className="links__list-item">
-            <a href={`https://www.vk.com/${links.vk}`} target="_blank" >
-              <i className="icon-vkontakte" />
-            </a>
-          </li>
-        </ul>
-        <ul className="links__list">
           <li className="links__list-item">
             <a href={`mailto:${links.email}`}>
               <i className="icon-mail" />
@@ -45,13 +38,15 @@ class Links extends React.Component {
             </a>
           </li>
         </ul>
-        <ul className="links__list">
-          <li className="links__list-item">
-            <a href={links.rss}>
-              <i className="icon-rss" />
-            </a>
-          </li>
-        </ul>
+        {links.rss.legth > 0 && (
+          <ul className="links__list">
+            <li className="links__list-item">
+              <a href={links.rss}>
+                <i className="icon-rss" />
+              </a>
+            </li>
+          </ul>
+        )}
       </div>
     );
   }
