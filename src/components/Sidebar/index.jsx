@@ -38,6 +38,13 @@ class Sidebar extends React.Component {
           </h2>
         )}
         <p className="sidebar__author-subtitle">{subtitle}</p>
+        <p className="sidebar__author-subtitle">
+          Current project:{' '}
+          <a href="https://www.feedbear.com" target="blank">
+            FeedBear
+          </a>{' '}
+          – Easiest way to manage feedback from your customers
+        </p>
       </div>
     );
     /* eslint-enable jsx-a11y/img-redundant-alt */

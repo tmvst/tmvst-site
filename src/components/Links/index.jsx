@@ -8,6 +8,7 @@ class Links extends React.Component {
     const links = {
       telegram: author.telegram,
       twitter: author.twitter,
+      instagram: author.instagram,
       github: author.github,
       vk: author.vk,
       rss: author.rss,
@@ -20,6 +21,11 @@ class Links extends React.Component {
           <li className="links__list-item">
             <a href={`https://www.twitter.com/${links.twitter}`} target="_blank">
               <i className="icon-twitter" />
+            </a>
+          </li>
+          <li className="links__list-item">
+            <a href={`https://www.instagram.com/${links.instagram}`} target="_blank">
+              <i className="icon-instagram" />
             </a>
           </li>
           <li className="links__list-item">

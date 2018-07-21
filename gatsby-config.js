@@ -25,6 +25,7 @@ module.exports = {
       telegram: 'tmvst',
       twitter: '@tmvst',
       github: 'tmvst',
+      instagram: 'tmvst',
       rss: '#',
       vk: '#'
     }
