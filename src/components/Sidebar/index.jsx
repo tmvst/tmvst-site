@@ -1,6 +1,7 @@
 import React from 'react';
 import get from 'lodash/get';
 import Link from 'gatsby-link';
+import { TinyLetter } from 'react-tinyletter';
 import Menu from '../Menu';
 import Links from '../Links';
 import profilePic from '../../pages/photo.jpg';
@@ -55,8 +56,18 @@ class Sidebar extends React.Component {
           <div className="sidebar__author">{authorBlock}</div>
           <div>
             <Menu data={menu} />
-            <Links data={author} />
-            <p className="sidebar__copyright">{copyright}</p>
+            <div className="sidebar__footer">
+              <h5 className="sidbar__heading">Become a friend</h5>
+              <p className="sidebar__text">
+                I will send you articles before I&nbsp;publish them. No spam. No ads.
+              </p>
+              <TinyLetter list="tmvst" className="sidebar__subscribe">
+                <input type="email" className="sidebar__subscribe__email" />
+                <input type="submit" value="&#10148;" className="sidebar__subscribe__button" />
+              </TinyLetter>
+              <Links data={author} />
+              <p className="sidebar__copyright">{copyright}</p>
+            </div>
           </div>
         </div>
       </div>
