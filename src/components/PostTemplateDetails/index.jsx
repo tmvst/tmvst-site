@@ -12,20 +12,23 @@ class PostTemplateDetails extends React.Component {
 
     const homeBlock = (
       <div>
-        <Link className="post-single__home-button" to="/">All Articles</Link>
+        <Link className="post-single__home-button" to="/">
+          &#8592;&nbsp;&nbsp;All Articles
+        </Link>
       </div>
     );
 
     const tagsBlock = (
       <div className="post-single__tags">
         <ul className="post-single__tags-list">
-          {tags && tags.map((tag, i) => (
-            <li className="post-single__tags-list-item" key={tag}>
-              <Link to={tag} className="post-single__tags-list-item-link">
-                {post.frontmatter.tags[i]}
-              </Link>
-            </li>
-          ))}
+          {tags &&
+            tags.map((tag, i) => (
+              <li className="post-single__tags-list-item" key={tag}>
+                <Link to={tag} className="post-single__tags-list-item-link">
+                  {post.frontmatter.tags[i]}
+                </Link>
+              </li>
+            ))}
         </ul>
       </div>
     );
@@ -52,7 +55,11 @@ class PostTemplateDetails extends React.Component {
             <hr />
             <p className="post-single__footer-text">
               {subtitle}
-              <a href={`https://twitter.com/${author.twitter}`} target="_blank" rel="noopener noreferrer">
+              <a
+                href={`https://twitter.com/${author.twitter}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <br /> <strong>{author.name}</strong> on Twitter
               </a>
             </p>

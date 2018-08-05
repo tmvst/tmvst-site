@@ -16,7 +16,7 @@ class Sidebar extends React.Component {
     /* eslint-disable jsx-a11y/img-redundant-alt */
     const authorBlock = (
       <div>
-        <Link to="/">
+        <Link to="/" className="sidebar__author-photolink">
           <img
             src={profilePic}
             className="sidebar__author-photo"
@@ -62,7 +62,11 @@ class Sidebar extends React.Component {
                 I will share articles with you before they are published here. No spam. No ads.
               </p>
               <TinyLetter list="tmvst" className="sidebar__subscribe">
-                <input type="email" className="sidebar__subscribe__email" />
+                <input
+                  type="email"
+                  className="sidebar__subscribe__email"
+                  placeholder="Your email"
+                />
                 <input type="submit" value="&#10148;" className="sidebar__subscribe__button" />
               </TinyLetter>
               <Links data={author} />
