@@ -59,7 +59,7 @@ class Sidebar extends React.Component {
             <div className="sidebar__footer">
               <h5 className="sidebar__heading">Become a friend</h5>
               <p className="sidebar__text">
-                I will send you articles before I&nbsp;publish them. No spam. No ads.
+                I will share articles with you before they are published here. No spam. No ads.
               </p>
               <TinyLetter list="tmvst" className="sidebar__subscribe">
                 <input type="email" className="sidebar__subscribe__email" />
