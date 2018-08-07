@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     url: 'https://tmv.st',
     title: 'Tomas Vestenicky – Personal Site & Blog',
-    subtitle: 'Universal maker. I create online projects, travel and shoot photos along the way.',
+    subtitle: 'I create online projects, travel and shoot photos along the way.',
     copyright: '© All rights reserved.',
     disqusShortname: '',
     menu: [
