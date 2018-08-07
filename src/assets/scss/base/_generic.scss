@@ -46,7 +46,7 @@ h2 {
 
 h3 {
   font-size: $typographic-base-font-size * 1.375;
-  @include line-height(1);
+  line-height: 1.4;
   @include margin-top(2);
   @include margin-bottom(0.5);
 }
@@ -114,6 +114,7 @@ a {
 b,
 strong {
   font-weight: 500;
+  color: lighten($color: $color-base, $amount: 10%);
 }
 
 ul {
