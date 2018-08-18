@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import moment from 'moment';
 import Disqus from '../Disqus/Disqus';
+import { TinyLetter } from 'react-tinyletter';
 import './style.scss';
 
 class PostTemplateDetails extends React.Component {
@@ -54,14 +55,18 @@ class PostTemplateDetails extends React.Component {
             {tagsBlock}
             <hr />
             <p className="post-single__footer-text">
-              {subtitle}
-              <a
-                href={`https://twitter.com/${author.twitter}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <br /> <strong>{author.name}</strong> on Twitter
-              </a>
+              <h4 className="">Become a friend</h4>
+              <p className="">
+                I will share articles with you before they are published here. No spam. No ads.
+              </p>
+              <TinyLetter list="tmvst" className="sidebar__subscribe sidebar__subscribe--footer">
+                <input
+                  type="email"
+                  className="sidebar__subscribe__email"
+                  placeholder="Your email"
+                />
+                <input type="submit" value="&#10148;" className="sidebar__subscribe__button" />
+              </TinyLetter>
             </p>
             {commentsBlock}
           </div>

@@ -59,6 +59,7 @@
     @include margin-top(1);
     @include margin-bottom(2);
     &-text {
+      text-align: center;
       & a {
         text-decoration: underline;
       }
